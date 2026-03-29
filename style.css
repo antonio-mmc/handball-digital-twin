@@ -1,0 +1,367 @@
+/* ----- GERAL E ESTRUTURA ----- */
+.stApp {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+}
+
+[data-testid="stHeader"]+div .stCheckbox,
+[data-testid="stHeader"]+div .stToggle {
+    margin-bottom: 20px;
+}
+
+[data-testid="stMain"] .stToggle label p {
+    color: var(--text-color) !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+}
+
+/* --- ESTILO DO WIDGET TOGGLE --- */
+[data-testid="stSidebar"] [data-testid="stToggle"] {
+    margin-bottom: 5px;
+}
+
+[data-testid="stSidebar"] div[data-testid="stToggle"] label p {
+    color: var(--sidebar-text) !important;
+}
+
+[data-testid="stSidebar"] .stMarkdown p {
+    margin-bottom: 0px !important;
+}
+
+[data-testid="stHeader"] {
+    background: rgba(0, 0, 0, 0);
+    z-index: 999999 !important;
+}
+
+[data-testid="stHeader"] button,
+[data-testid="stHeader"] button span,
+[data-testid="stHeader"] button svg {
+    color: var(--text-color) !important;
+    fill: var(--text-color) !important;
+    font-weight: bold !important;
+}
+
+[data-testid="stHeader"] button:hover {
+    color: #ff4b4b !important;
+}
+
+[data-testid="stHeader"] button:hover svg {
+    fill: #ff4b4b !important;
+}
+
+.block-container {
+    padding-top: 2rem !important;
+}
+
+/* ----- BARRA LATERAL (SIDEBAR) ----- */
+[data-testid="stSidebar"] {
+    background-color: #0e1117;
+    background-image: var(--sidebar-bg);
+}
+
+section[data-testid="stSidebar"]>div::-webkit-scrollbar {
+    display: none !important;
+}
+
+section[data-testid="stSidebar"]>div {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stVerticalBlock"] {
+    gap: 1.2rem !important;
+}
+
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3,
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] p {
+    color: var(--sidebar-text) !important;
+}
+
+.stSidebar .stRadio div[role="radiogroup"] {
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 5px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stSidebar .stRadio p {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.stSidebar .stSelectbox p {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+/* ----- CONTEÚDO PRINCIPAL ----- */
+[data-testid="stMain"] h1,
+[data-testid="stMain"] h2,
+[data-testid="stMain"] h3,
+[data-testid="stMain"] h4,
+[data-testid="stMain"] h5 {
+    color: var(--text-color);
+}
+
+.subtitulo-visualizacao {
+    text-align: center;
+    color: var(--subtitle-visualizacao);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+[data-testid="stMain"] [data-testid="stWidgetLabel"] p,
+[data-testid="stMain"] [data-testid="stWidgetLabel"] span,
+[data-testid="stMain"] .stSlider p,
+[data-testid="stMain"] .stSlider span,
+[data-testid="stMain"] div[data-testid="stLabel"],
+[data-testid="stMain"] div[data-testid="stThumbValue"] {
+    color: var(--text-color) !important;
+    font-weight: 600 !important;
+}
+
+/* ----- BARRA DE FILTROS ----- */
+[data-testid="stHorizontalBlock"]:has(.f-row-single),
+[data-testid="stHorizontalBlock"]:has(.f-row-top),
+[data-testid="stHorizontalBlock"]:has(.f-row-bottom) {
+    background-color: var(--filter-row-bg);
+    border: 1px solid var(--filter-row-border);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+    padding: 15px 20px;
+    gap: 1rem !important;
+}
+
+[data-testid="stHorizontalBlock"]:has(.f-row-top) {
+    border-radius: 15px 15px 0 0;
+    border-bottom: none;
+    margin-bottom: 0 !important;
+    padding-bottom: 5px;
+}
+
+[data-testid="stHorizontalBlock"]:has(.f-row-bottom) {
+    border-radius: 0 0 15px 15px;
+    border-top: none;
+    margin-top: -1.05rem !important;
+    padding-top: 5px;
+}
+
+[data-testid="stHorizontalBlock"]:has(.f-row-single) {
+    border-radius: 15px;
+    margin-bottom: 25px !important;
+    justify-content: center;
+}
+
+.filter-row-header {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: var(--filter-title);
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    opacity: 1.0;
+    line-height: 1.2;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+[data-testid="stHorizontalBlock"]:has(.f-row-top) [data-testid="stVerticalBlock"],
+[data-testid="stHorizontalBlock"]:has(.f-row-bottom) [data-testid="stVerticalBlock"],
+[data-testid="stHorizontalBlock"]:has(.f-row-single) [data-testid="stVerticalBlock"] {
+    justify-content: center;
+}
+
+.filter-container {
+    display: none;
+}
+
+/* ----- EXPANSORES E POPOVERS ----- */
+div[data-testid="stExpander"] details,
+div[data-testid="stExpander"] summary {
+    background-color: var(--filter-row-bg) !important;
+    color: var(--text-color) !important;
+    border-radius: 8px !important;
+    border: 1px solid var(--filter-row-border) !important;
+}
+
+div[data-testid="stPopover"] button {
+    background-color: var(--popover-bg) !important;
+    color: var(--popover-text) !important;
+    border: 1px solid var(--popover-border) !important;
+    border-radius: 8px !important;
+}
+
+div[data-testid="stPopover"] button:hover {
+    background-color: var(--popover-hover-bg) !important;
+    border-color: #1565c0 !important;
+    color: #1565c0 !important;
+}
+
+[data-testid="stMain"] hr {
+    border: none !important;
+    margin: 2rem 0 !important;
+    height: 2px !important;
+    background: var(--hr-color) !important;
+}
+
+/* ----- ELEMENTOS DIVERSOS ----- */
+.sidebar-section-title {
+    color: #666666;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.main-header-container {
+    text-align: center;
+    margin-bottom: 0px !important;
+}
+
+.main-header-title {
+    font-size: 3.7rem !important;
+    color: var(--main-header-title) !important;
+}
+
+.main-header-subtitle {
+    color: var(--main-header-subtitle) !important;
+    font-weight: 300 !important;
+    margin-top: 10px !important;
+}
+
+.metrics-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.metric-box {
+    text-align: center;
+}
+
+.metric-label {
+    font-size: 1.6rem;
+    color: var(--metric-label);
+}
+
+.metric-value {
+    font-size: 2.7rem;
+    font-weight: bold;
+}
+
+.metric-black {
+    color: var(--text-color);
+}
+
+.metric-green {
+    color: #2e7d32;
+}
+
+.metric-red {
+    color: #d32f2f;
+}
+
+.metric-orange {
+    color: #e65100;
+}
+
+.metric-blue {
+    color: #1565c0;
+}
+
+.metric-unit {
+    font-size: 1.5rem;
+}
+
+.metric-badge {
+    font-size: 1.2rem;
+    color: #2e7d32;
+    background: rgba(46, 125, 50, 0.1);
+    padding: 2px 8px;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+.zone-header-title {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.zone-header-title-no-margin {
+    text-align: center;
+    color: var(--text-color);
+}
+
+.filter-title {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.filter-title-large {
+    font-size: 1.4rem;
+    margin-top: 20px;
+}
+
+.filter-title-medium {
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+.filter-title-small {
+    font-size: 1.2rem;
+    margin-top: 8px;
+}
+
+.filter-label {
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.filter-label-no-margin {
+    margin-bottom: 0px;
+}
+
+.filter-label-margin-5 {
+    margin-bottom: 5px;
+}
+
+.nav-container-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0px;
+    margin-top: -25px;
+}
+
+.nav-link-sidebar {
+    display: block;
+    text-align: left;
+    text-decoration: none !important;
+    background-color: var(--nav-sidebar-bg);
+    color: var(--nav-sidebar-text) !important;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.nav-link-sidebar:hover {
+    background-color: #f8f9fa;
+    color: #2980b9 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link-sidebar:active {
+    transform: translateY(0px);
+}
