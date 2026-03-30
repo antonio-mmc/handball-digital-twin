@@ -6,8 +6,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://handball-digital-twin.streamlit.app/)
 
-> [!NOTE]
-> **Language Interface**: Although this documentation is in English, the application's user interface is in **Portuguese**, reflecting its original context in a professional sports environment in Portugal.
+> [!IMPORTANT]
+> **Elite Portfolio Update**: This version has been upgraded to **professional grade**, including Machine Learning predictive models, bilingual support (PT/EN), and automated PDF reporting.
 
 ## 🌟 Overview
 
@@ -26,18 +26,25 @@ The system is organized into four specialized analysis modules:
 - **3x3 Efficiency Grid**: Detailed save rates for nine goal sectors (Top/Middle/Base x Left/Center/Right).
 - **Shooter Position Mapping**: Performance analysis based on the attacker's role (Wing, Pivot, Back, Center).
 
-### 2. 📈 Temporal Evolution (Zone 2)
+### 2. 🧠 Predictive Twin (ML Module)
+- **Save Probability Heatmap**: Utilizes a **Random Forest Classifier** to predict save probabilities in real-time.
+- **Dynamic Simulation**: Adjust variables like shot technique, speed, and goalkeeper heart rate to visualize the "Digital Twin's" predicted response.
+
+### 3. 📈 Temporal Evolution (Zone 2)
 - **Efficiency Heatmap Matrix**: Tracks technical success over a sequence of games to identify trends in fatigue or tactical adaptation.
 - **Dynamic Filtering**: Isolate specific shot types or time ranges during the season.
 
-### 3. 🎯 Technical Dynamics (Zone 3)
-- **Efficiency Ranking**: Comparative success rates across different shot types (e.g., 6 meters, 9 meters, fast break).
+### 4. 🎯 Technical Dynamics (Zone 3)
+- **Efficiency Ranking**: Success rates across different shot types (e.g., 6m, 9m, Fast Break).
 - **Reaction Speed Analysis**: Precise measurement of reaction times (ms) to optimize cognitive training.
 
-### 4. 🧬 Biometrics & Human Performance (Zone 4)
-- **Physiological Monitoring**: Real-time heart rate (BPM) tracking synchronized with gameplay events.
-- **Fatigue vs. Reaction Correlation**: Visualizing how physiological stress directly impacts goalkeeper reaction speed.
-- **Biometric Timeline**: Minute-by-minute evolution of the athlete's state.
+### 5. 🧬 Biometrics & Human Performance (Zone 4)
+- **Physiological Monitoring**: Heart rate (BPM) tracking synchronized with gameplay events.
+- **Pearson Correlation ($R$)**: Automated statistical calculation of the correlation between fatigue (HR) and cognitive performance (Reaction Time).
+
+### 6. 🌍 Bilingual & Reporting
+- **PT/EN Toggle**: Full internationalization support for the entire dashboard.
+- **PDF Summary Export**: Generates a professional performance report with one click.
 
 ---
 
@@ -46,8 +53,10 @@ The system is organized into four specialized analysis modules:
 - **Core**: Python 3.10+
 - **Frontend/Dashboard**: Streamlit (for high-performance interactive web UI)
 - **Data Engine**: Pandas (for complex time-series and event-based data processing)
-- **Visualization**: Plotly Graph Objects & Express (for professional, interactive vector-based charts)
-- **Image Processing**: Pillow (for spatial mapping onto digital assets)
+- **Machine Learning**: Scikit-learn (Random Forest Classifier for save prediction)
+- **Visualization**: Plotly Graph Objects & Express
+- **Reporting**: FPDF2 (Dynamic PDF generation)
+- **Image Processing**: Pillow & Kaleido
 
 ---
 
@@ -55,17 +64,17 @@ The system is organized into four specialized analysis modules:
 
 This project was a deep dive into the intersection of **Data Science** and **Elite Sports Performance**:
 
-1. **The Digital Twin Concept**: I learned how to create a digital representation of a physical human system, translating biological signals into actionable tactical insights.
-2. **Correlation Analysis**: Discovering the mathematical relationship between physiological markers (BPM) and cognitive-motor output (Reaction Time).
-3. **User-Centric Design for Coaches**: Building a dashboard that must be readable in high-pressure environments, requiring clean layouts and low-latency interactions.
-4. **Complex Spatial Mapping**: Implementing precise coordinate mapping for goal-area visualizations using Plotly and CSS.
+1. **The Digital Twin Concept**: Translating biological signals into actionable tactical insights.
+2. **Predictive Modeling**: Implementing and deploying an ML model into a real-time dashboard.
+3. **Pearson Correlation in Sports**: Quantifying the mathematical relationship between physiological fatigue (BPM) and motor output (Reaction Time).
+4. **Professional i18n**: Building a scalable localization system for international portability.
 
 ---
 
 ## 🔧 Future Improvements
 
 To take this platform to a professional production level, several enhancements are planned:
-- **Machine Learning Integration**: Implementing predictive models to forecast shot outcomes based on shooter positioning and historical goalkeeper patterns.
+- **Anomaly Detection**: Identifying abnormal heart rate spikes or reaction time drops.
 - **Real-time Wearable APIs**: Integrating directly with sensors (like Polar or Garmin) for live data ingestion during matches.
 - **Mobile-First UX**: Optimization for tablet/mobile use for sideline coaches.
 - **Multi-Player Benchmarking**: Adding a module for comparative analysis between different goalkeepers in a squad.

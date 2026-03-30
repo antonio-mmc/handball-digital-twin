@@ -69,7 +69,7 @@ section[data-testid="stSidebar"]>div {
 }
 
 [data-testid="stSidebar"] [data-testid="stVerticalBlock"] {
-    gap: 1.2rem !important;
+    gap: 1.0rem !important;
 }
 
 [data-testid="stSidebar"] h1,
@@ -82,7 +82,7 @@ section[data-testid="stSidebar"]>div {
 
 .stSidebar .stRadio div[role="radiogroup"] {
     background-color: rgba(255, 255, 255, 0.03);
-    padding: 5px 12px;
+    padding: 2px 10px;
     border-radius: 6px;
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -211,8 +211,11 @@ div[data-testid="stPopover"] button:hover {
 /* ----- ELEMENTOS DIVERSOS ----- */
 .sidebar-section-title {
     color: #666666;
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-weight: bold;
+    margin-top: 20px !important;
+    margin-bottom: 12px !important;
+    letter-spacing: 0.5px;
 }
 
 .main-header-container {
@@ -335,7 +338,7 @@ div[data-testid="stPopover"] button:hover {
     flex-direction: column;
     gap: 5px;
     padding: 0px;
-    margin-top: -25px;
+    margin-top: 10px;
 }
 
 .nav-link-sidebar {
@@ -364,4 +367,46 @@ div[data-testid="stPopover"] button:hover {
 
 .nav-link-sidebar:active {
     transform: translateY(0px);
+}
+
+/* ----- PREDICTIVE INTELLIGENCE & PDF EXPORT ----- */
+.stDownloadButton button {
+    background-color: #2e7d32 !important;
+    color: white !important;
+    border-radius: 12px !important;
+    border: none !important;
+    padding: 0.75rem 1.5rem !important;
+    font-weight: 700 !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
+}
+
+.stDownloadButton button:hover {
+    background-color: #1b5e20 !important;
+    box-shadow: 0 8px 15px rgba(46, 125, 50, 0.3) !important;
+    transform: translateY(-2px) scale(1.02) !important;
+}
+
+/* Modernize Info and Error boxes */
+div[data-testid="stNotification"] {
+    border-radius: 15px !important;
+    border: 1px solid rgba(0,0,0,0.05) !important;
+    padding: 1.5rem !important;
+    backdrop-filter: blur(5px);
+}
+
+/* Subtle background for ML Section */
+[data-testid="stVerticalBlock"]:has(h3:contains("Inteligência Preditiva")),
+[data-testid="stVerticalBlock"]:has(h3:contains("Predictive Intelligence")) {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 2rem;
+}
+
+/* Tooltip/Help Icon Color */
+[data-testid="stTooltipIcon"] {
+    color: var(--text-color) !important;
+    opacity: 0.6;
 }
